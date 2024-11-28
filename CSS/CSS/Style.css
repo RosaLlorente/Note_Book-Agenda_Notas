@@ -1,0 +1,162 @@
+body
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(53, 51, 56);
+    margin: 0;
+}
+header
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    gap: 1em;
+    width: 100%;
+    height: auto;
+    border-bottom: black 4px groove;
+    background-color: rgb(2, 0, 28);
+    box-shadow: 1px 1px 70px 1px rgb(0, 0, 0);
+}
+.line
+{
+    width: 30rem;
+    height: 2px;
+    background-color: aqua;
+    animation: line 3s infinite;
+}
+.title
+{
+    display: flex;
+    flex-direction: row;
+    gap: 6rem;
+}
+.line2
+{
+    width: 2px;
+    height: 4rem;
+    background-color: aqua;
+    animation: line2 3s infinite;
+}
+h1
+{
+    font-family: 'Courier New', Courier, monospace;
+    color: aqua;
+    animation: ledTitle 1s infinite;
+}
+button
+{
+    background-color: aquamarine;
+    width: 5rem;
+    height: 2rem;
+    border: 3px solid black;
+    transition: box-shadow 2s,transform 2s;
+}
+button:hover
+{
+    box-shadow: 1px 1px 7px 1px rgb(92, 255, 174);
+    transform: translate(-3px,2px);
+    font-weight: bold;
+}
+.data
+{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    gap: 1em;
+}
+label
+{
+    font-family: 'Courier New', Courier, monospace;
+    color: aqua;
+    font-weight: bold;
+}
+input
+{
+    background-color: aquamarine;
+    transition: box-shadow 3s;
+}
+input:focus,li:hover
+{
+    box-shadow: 1px 1px 7px 2px rgb(92, 255, 174); 
+}
+.Notes
+{
+    width: 100%;
+    height: auto;
+}
+ul{
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 1rem;
+    width: 100%;
+    padding: 20px;
+}
+li
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3rem;
+    position: absolute; 
+    width: 10rem;
+    height: 10rem;
+    background-color: rgb(196, 227, 224);
+    border: groove 3px aqua ;
+    cursor: grab;
+    transition: box-shadow 3s,transform 3s;
+}
+li:hover {
+    box-shadow: 1px 1px 7px 2px rgb(92, 255, 174); 
+    transform: translate(-1rem,1rem);
+}
+li > button
+{
+    width: 4rem;
+    height: 1.5rem;
+}
+
+@keyframes ledTitle {
+    0% {
+        text-shadow: 2px 2px 7px rgb(175, 252, 192);
+    }
+    25% {
+        text-shadow: 2px 2px 7px rgb(133, 255, 182);
+    }
+    50% {
+        text-shadow: 2px 2px 7px rgb(92, 255, 174);
+    }
+    75% {
+        text-shadow: 2px 2px 7px rgb(46, 255, 200);
+    }
+    100% {
+        text-shadow: 2px 2px 7px rgb(175, 252, 192); /* Coincide con el 0% */
+    }
+}
+@keyframes line
+{
+    0% {
+        width: 0%;
+    }
+    50% {
+        width: 30rem;
+    }
+    100% {
+        width: 0%;
+    }
+}
+@keyframes line2
+{
+    0% {
+        transform: scaleY(0);
+    }
+    50% {
+        transform: scaleY(1);
+    }
+    100% {
+        transform: scaleY(0);
+    }
+}
